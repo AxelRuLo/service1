@@ -1,13 +1,11 @@
 var express = require('express');
 var app = express();
-var cors = require("express")
+var cors = require("cors")
 const port = process.env.PORT || 3000
 const login = require("./routes/login")
 
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 
 
 app.use(express.json())
